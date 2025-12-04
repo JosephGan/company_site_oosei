@@ -1,0 +1,210 @@
+/* prevents nav bar stuttering when scrollbar appears */
+html {
+  scrollbar-gutter: stable;
+}
+
+/* -------- 基础样式重置 -------- */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.6;
+  color: #1f2937; /* text-gray-800 */
+  background: #ffffff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* -------- 整体布局 -------- */
+
+main {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* -------- 导航栏 -------- */
+
+header {
+  border-bottom: 1px solid #e5e7eb;
+  background: #ffffff;
+}
+
+/* 导航栏整体 */
+.nav {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* 左侧公司名 */
+.nav-brand {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-right: 2rem;
+}
+
+/* 右侧：导航 + 语言切换 */
+.nav-right {
+  margin-left: auto;            /* 把右侧整体挤到右边 */
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* 导航链接 */
+.nav-right > a {
+  padding: 0.3rem 0.5rem;
+  border-bottom: 2px solid transparent;
+  font-weight: 500;
+}
+
+.nav-right > a:hover {
+  border-bottom-color: #2563eb;
+  color: #2563eb;
+}
+
+/* 语言切换区域 */
+.nav-lang {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.nav-lang a {
+  font-size: 0.85rem;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+}
+
+.nav-lang a:hover {
+  border-color: #2563eb;
+  color: #2563eb;
+}
+
+/* -------- Hero 区块 -------- */
+
+.hero {
+  padding: 3rem 0 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 0.5rem auto 1.5rem;
+  font-size: 1.1rem;
+  color: #4b5563;
+}
+
+/* Hero 按钮 */
+
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  border-radius: 6px;
+  margin: 0.3rem;
+  font-weight: 600;
+}
+
+.btn.primary {
+  background: #2563eb;
+  color: white;
+}
+
+.btn.primary:hover {
+  background: #1e4ed8;
+}
+
+.btn.secondary {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.btn.secondary:hover {
+  background: #d1d5db;
+}
+
+/* -------- Section 标题 -------- */
+
+section h1,
+section h2 {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+section p {
+  margin: 0.5rem 0 1rem;
+}
+
+/* -------- 卡片网格 -------- */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.card {
+  padding: 1.2rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #ffffff;
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+  color: #111827;
+}
+
+.card p {
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+/* -------- 列表 -------- */
+
+ul {
+  margin: 0.5rem 0 1rem 1.2rem;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* -------- 页脚 -------- */
+
+footer {
+  border-top: 1px solid #e5e7eb;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-top: 3rem;
+}

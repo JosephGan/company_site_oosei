@@ -1,0 +1,20 @@
+---
+import Layout from "../layouts/BaseLayout.astro";
+import { text } from "../content/text.js";
+
+const t = text["zh"];
+---
+
+<Layout>
+  <section class="services">
+    <h1 data-i18n="services.title">{t.services.title}</h1>
+    <div class="grid services" data-service-list="zh">
+      {t.services.items.map(item => (
+        <div class="card service-item">
+          <h2>{item.title}</h2>
+          <p>{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+</Layout>

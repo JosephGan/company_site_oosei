@@ -1,0 +1,30 @@
+---
+import Layout from "../layouts/BaseLayout.astro";
+import { text } from "../content/text.js";
+
+const lang = "zh"; // Default for SSG
+const t = text[lang];
+---
+
+<Layout>
+  <section class="hero">
+    <h1 data-i18n="home.heroTitle">{t.home.heroTitle}</h1>
+    <p data-i18n="home.heroSubtitle">{t.home.heroSubtitle}</p>
+    <div class="buttons">
+      <a href="/contact" class="btn primary" data-i18n="home.buttons.contact">{t.home.buttons.contact}</a>
+      <a href="/services" class="btn secondary" data-i18n="home.buttons.services">{t.home.buttons.services}</a>
+    </div>
+  </section>
+
+  <section class="features">
+    <h2 data-i18n="home.featuresTitle">{t.home.featuresTitle}</h2>
+    <div class="grid feature-list" data-feature-list="zh">
+      {t.home.features.map(f => (
+        <div class="feature-item">
+          <h3 data-i18n={`home.features.${t.home.features.indexOf(f)}.title`}>{f.title}</h3>
+          <p data-i18n={`home.features.${t.home.features.indexOf(f)}.desc`}>{f.desc}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+</Layout>

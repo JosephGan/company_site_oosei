@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/BaseLayout.astro";
+import { text } from "../content/text.js";
+
+const t = text["zh"];
+---
+
+<Layout>
+  <section class="contact">
+    <h1 data-i18n="contact.title">{t.contact.title}</h1>
+    <p data-i18n="contact.intro">{t.contact.intro}</p>
+    
+    <div class="contact-info">
+      <p><strong data-i18n="contact.emailLabel">{t.contact.emailLabel}:</strong> {t.company.email}</p>
+      <p><strong data-i18n="contact.phoneLabel">{t.contact.phoneLabel}:</strong> {t.company.phone}</p>
+      <p><strong data-i18n="contact.addressLabel">{t.contact.addressLabel}:</strong> {t.company.address}</p>
+    </div>
+  </section>
+</Layout>

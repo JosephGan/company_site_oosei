@@ -1,0 +1,15 @@
+---
+import Layout from "../layouts/BaseLayout.astro";
+import { text } from "../content/text.js";
+
+const t = text["zh"]; // Default for SSG
+---
+
+<Layout>
+  <section class="about">
+    <h1 data-i18n="about.title">{t.about.title}</h1>
+    {t.about.paragraphs.map((para, i) => (
+      <p data-i18n={`about.paragraphs.${i}`}>{para}</p>
+    ))}
+  </section>
+</Layout>
