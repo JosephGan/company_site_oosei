@@ -1,0 +1,53 @@
+<!DOCTYPE html><html lang="zh"> <head><meta charset="utf-8"><title>某某株式会社</title><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="/styles/global.css"></head> <body> <header> <nav class="nav"> <div class="nav-brand" data-i18n="brand"> 某某株式会社 </div> <div class="nav-right"> <a href="/" data-i18n="nav.home">首页</a> <a href="/about" data-i18n="nav.about">关于我们</a> <a href="/services" data-i18n="nav.services">服务项目</a> <a href="/contact" data-i18n="nav.contact">联系我们</a> <span class="nav-lang"> <a href="#" data-lang="zh">中文</a> <span>|</span> <a href="#" data-lang="ja">日本語</a> </span> </div> </nav> </header> <main>  <section class="contact"> <h1 data-i18n="contact.title">联系我们</h1> <p data-i18n="contact.intro">如需咨询报价或合作事宜，请通过以下方式联系：</p> <div class="contact-info"> <p><strong data-i18n="contact.emailLabel">邮箱:</strong> contact@example.com</p> <p><strong data-i18n="contact.phoneLabel">电话:</strong> 03-xxxx-xxxx</p> <p><strong data-i18n="contact.addressLabel">地址:</strong> 東京都〇〇区〇〇 1-2-3 ABCビル 5F</p> </div> </section>  </main> <footer data-i18n="brand"> 某某株式会社 </footer> <script>(function(){const text = {"zh":{"brand":"某某株式会社","nav":{"home":"首页","about":"关于我们","services":"服务项目","contact":"联系我们"},"home":{"heroTitle":"用简单可靠的方案解决业务问题","heroSubtitle":"我们专注于企业官网与数字解决方案。","buttons":{"contact":"预约咨询","services":"查看服务项目"},"featuresTitle":"我们的优势","features":[{"title":"快速上线","desc":"1-2 周即可完成上线"},{"title":"响应式设计","desc":"适配手机、平板、电脑"},{"title":"易于维护","desc":"结构清晰，方便后期维护"}]},"about":{"title":"关于我们","paragraphs":["某某株式会社是一家位于东京的 Web 制作团队。","我们专注于企业网站与品牌网站，服务中小企业与个人事业主。"]},"services":{"title":"服务项目","items":[{"title":"企业官网制作","desc":"搭建高质量企业官网"},{"title":"活动页 / 着陆页","desc":"适合推广、广告、产品介绍"},{"title":"中日双语网站","desc":"同时面向中文与日文客户"}]},"contact":{"title":"联系我们","intro":"如需咨询报价或合作事宜，请通过以下方式联系：","emailLabel":"邮箱","phoneLabel":"电话","addressLabel":"地址"},"company":{"email":"contact@example.com","phone":"03-xxxx-xxxx","address":"東京都〇〇区〇〇 1-2-3 ABCビル 5F"}},"ja":{"brand":"〇〇株式会社","nav":{"home":"ホーム","about":"会社概要","services":"サービス","contact":"お問い合わせ"},"home":{"heroTitle":"シンプルで確実な仕組みで課題を解決します","heroSubtitle":"企業サイトとデジタルソリューションを提供します。","buttons":{"contact":"お問い合わせ","services":"サービスを見る"},"featuresTitle":"私たちの強み","features":[{"title":"スピード公開","desc":"1〜2週間でローンチ可能"},{"title":"レスポンシブ対応","desc":"PC・タブレット・スマホ対応"},{"title":"運用しやすい構成","desc":"シンプルで編集しやすい"}]},"about":{"title":"会社概要","paragraphs":["〇〇株式会社は東京を拠点とする Web 制作チームです。","企業サイト・ブランドサイトの制作を中心に支援しています。"]},"services":{"title":"サービス","items":[{"title":"コーポレートサイト制作","desc":"高品質な企業サイトを制作します"},{"title":"ランディングページ制作","desc":"広告・製品紹介に最適です"},{"title":"多言語サイト","desc":"日本語・中国語の二言語サイトに対応します"}]},"contact":{"title":"お問い合わせ","intro":"お問い合わせ・お見積もりは下記の連絡先よりお願いいたします。","emailLabel":"メール","phoneLabel":"電話","addressLabel":"住所"},"company":{"email":"contact@example.com","phone":"03-xxxx-xxxx","address":"東京都〇〇区〇〇 1-2-3 ABCビル 5F"}}};
+
+    let currentLang = localStorage.getItem("lang") || "zh";
+    
+    function applyLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem("lang", lang);
+      document.documentElement.lang = lang;
+      
+      // Translate simple data-i18n elements
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const keys = el.dataset.i18n.split(".");
+        let value = text[lang];
+        for (const key of keys) {
+          value = value[key];
+        }
+        if (typeof value === "string") {
+          el.textContent = value;
+        }
+      });
+      
+      // Re-render feature list (home page)
+      const featureList = document.querySelector("[data-feature-list]");
+      if (featureList && text[lang].home.features) {
+        featureList.innerHTML = text[lang].home.features.map(f => `
+          <div class="card feature">
+            <h3>${f.title}</h3>
+            <p>${f.desc}</p>
+          </div>
+        `).join("");
+      }
+      
+      // Re-render service list (services page)
+      const serviceList = document.querySelector("[data-service-list]");
+      if (serviceList && text[lang].services.items) {
+        serviceList.innerHTML = text[lang].services.items.map(item => `
+          <div class="card service-item">
+            <h2>${item.title}</h2>
+            <p>${item.desc}</p>
+          </div>
+        `).join("");
+      }
+    }
+    
+    document.querySelectorAll("[data-lang]").forEach(link => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        applyLanguage(link.dataset.lang);
+      });
+    });
+    
+    applyLanguage(currentLang);
+  })();</script> </body></html>
