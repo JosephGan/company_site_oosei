@@ -46,8 +46,8 @@ export const text = {
       addressLabel: "地址",
     },
     company: {
-      email: "contact@example.com",
-      phone: "03-xxxx-xxxx",
+      email: "ysys007@gmail.com",
+      phone: "080-5260-1121",
       address: "東京都墨田区本所 2-10-5 稲葉ビル 303",
     },
   },
@@ -97,9 +97,9 @@ export const text = {
       addressLabel: "住所",
     },
     company: {
-      email: "contact@example.com",
-      phone: "03-xxxx-xxxx",
-      address: "東京都〇〇区〇〇 1-2-3 ABCビル 5F",
+      email: "ysys007@gmail.com",
+      phone: "080-5260-1121",
+      address: "東京都墨田区本所 2-10-5 稲葉ビル 303",
     },
   },
 };
