@@ -2,7 +2,7 @@ export const defaultLang = "zh";
 
 export const text = {
   zh: {
-    brand: "某某株式会社",
+    brand: "大盛株式会社",
     nav: {
       home: "首页",
       about: "关于我们",
@@ -10,32 +10,32 @@ export const text = {
       contact: "联系我们",
     },
     home: {
-      heroTitle: "用简单可靠的方案解决业务问题",
-      heroSubtitle: "我们专注于企业官网与数字解决方案。",
+      heroTitle: "欢迎光临大盛株式会社官方网站！",
+      heroSubtitle: "精益求精，为您服务",
       buttons: {
         contact: "预约咨询",
         services: "查看服务项目",
       },
       featuresTitle: "我们的优势",
       features: [
-        { title: "快速上线", desc: "1-2 周即可完成上线" },
-        { title: "响应式设计", desc: "适配手机、平板、电脑" },
-        { title: "易于维护", desc: "结构清晰，方便后期维护" },
+        { title: "丰富的服务经验", desc: "多年行业经验，客户众多" },
+        { title: "专业团队", desc: "多名行业精英为您服务" },
+        { title: "热情服务", desc: "提供周到、热情的服务" },
       ],
     },
     about: {
       title: "关于我们",
       paragraphs: [
-        "某某株式会社是一家位于东京的 Web 制作团队。",
-        "我们专注于企业网站与品牌网站，服务中小企业与个人事业主。",
+        "大盛株式会社2025年成立，位于东京墨田区。",
+        "我们专注于为中小企业与个人事业主提供各种定制化服务。",
       ],
     },
     services: {
       title: "服务项目",
       items: [
-        { title: "企业官网制作", desc: "搭建高质量企业官网" },
-        { title: "活动页 / 着陆页", desc: "适合推广、广告、产品介绍" },
-        { title: "中日双语网站", desc: "同时面向中文与日文客户" },
+        { title: "广告", desc: "定制化广告服务" },
+        { title: "跨境贸易", desc: "中日间跨境贸易" },
+        { title: "咨询", desc: "广告、贸易等业务咨询" },
       ],
     },
     contact: {
@@ -48,12 +48,12 @@ export const text = {
     company: {
       email: "contact@example.com",
       phone: "03-xxxx-xxxx",
-      address: "東京都〇〇区〇〇 1-2-3 ABCビル 5F",
+      address: "東京都墨田区本所 2-10-5 稲葉ビル 303",
     },
   },
 
   ja: {
-    brand: "〇〇株式会社",
+    brand: "大盛株式会社",
     nav: {
       home: "ホーム",
       about: "会社概要",
@@ -61,39 +61,39 @@ export const text = {
       contact: "お問い合わせ",
     },
     home: {
-      heroTitle: "シンプルで確実な仕組みで課題を解決します",
-      heroSubtitle: "企業サイトとデジタルソリューションを提供します。",
+      heroTitle: "大盛株式会社の公式ウェブサイトへようこそ！",
+      heroSubtitle: "品質に妥協せず、心を込めてサービスを提供します",
       buttons: {
-        contact: "お問い合わせ",
-        services: "サービスを見る",
+        contact: "相談を予約する",
+        services: "サービス内容を見る",
       },
-      featuresTitle: "私たちの強み",
+      featuresTitle: "当社の強み",
       features: [
-        { title: "スピード公開", desc: "1〜2週間でローンチ可能" },
-        { title: "レスポンシブ対応", desc: "PC・タブレット・スマホ対応" },
-        { title: "運用しやすい構成", desc: "シンプルで編集しやすい" },
+        { title: "豊富なサービス実績", desc: "長年の業界経験と多数の実績" },
+        { title: "専門チーム", desc: "業界のプロフェッショナルが対応" },
+        { title: "丁寧で親身な対応", desc: "きめ細やかで心のこもったサービス" },
       ],
     },
     about: {
       title: "会社概要",
       paragraphs: [
-        "〇〇株式会社は東京を拠点とする Web 制作チームです。",
-        "企業サイト・ブランドサイトの制作を中心に支援しています。",
+        "大盛株式会社は2025年に設立され、東京都墨田区に拠点を置いています。",
+        "中小企業および個人事業主向けに、各種カスタマイズサービスを提供しています。",
       ],
     },
     services: {
-      title: "サービス",
+      title: "サービス内容",
       items: [
-        { title: "コーポレートサイト制作", desc: "高品質な企業サイトを制作します" },
-        { title: "ランディングページ制作", desc: "広告・製品紹介に最適です" },
-        { title: "多言語サイト", desc: "日本語・中国語の二言語サイトに対応します" },
+        { title: "広告", desc: "オーダーメイドの広告サービス" },
+        { title: "越境貿易", desc: "日中間の越境貿易サポート" },
+        { title: "コンサルティング", desc: "広告・貿易などに関する各種コンサルティング" },
       ],
     },
     contact: {
       title: "お問い合わせ",
-      intro: "お問い合わせ・お見積もりは下記の連絡先よりお願いいたします。",
+      intro: "お見積りやご相談、提携に関するお問い合わせは、以下よりご連絡ください。",
       emailLabel: "メール",
-      phoneLabel: "電話",
+      phoneLabel: "電話番号",
       addressLabel: "住所",
     },
     company: {
