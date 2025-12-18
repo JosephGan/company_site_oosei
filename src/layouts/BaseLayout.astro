@@ -101,13 +101,15 @@ const t = text[lang];
     // Hamburger menu toggle
     const hamburgerBtn = document.getElementById('hamburger-btn');
     const navMenu = document.getElementById('nav-menu');
-    console.log('hamburgerBtn:', hamburgerBtn);
-    console.log('navMenu:', navMenu);
     hamburgerBtn.addEventListener('click', () => {
-      console.log('clicked');
       navMenu.classList.toggle('open');
-      console.log('navMenu classList:', navMenu.classList);
     });
 
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!navMenu.contains(e.target) && e.target !== hamburgerBtn) {
+        navMenu.classList.remove('open');
+      }
+    });
   </script>
 </html>
